@@ -6,15 +6,19 @@ handlers['scanimgOnClickHandler'] = function(info, tab) {
 };
 
 handlers['copyimgOnClickHandler'] = function(info, tab) {
-    var doc = window.document;
-    const input = doc.createElement('textarea');
-    input.style.position = 'fixed';
-    input.style.opacity = 0;
-    input.value = info.srcUrl;
-    doc.body.appendChild(input);
-    input.select();
-    doc.execCommand('Copy');
-    doc.body.removeChild(input);
+    // var doc = window.document;
+    // const input = doc.createElement('textarea');
+    // input.style.position = 'fixed';
+    // input.style.opacity = 0;
+    // input.value = info.srcUrl;
+    // doc.body.appendChild(input);
+    // input.select();
+    // doc.execCommand('Copy');
+    // doc.body.removeChild(input);
+    console.log('sent message...');
+    chrome.tabs.sendMessage(tab.id, {c:'copyimg', picSrcUrl: info.srcUrl});
+    console.log(tab.id);
+    console.log(info.srcUrl);
 };
 
 function onClickHandler(info, tab) {
@@ -22,6 +26,7 @@ function onClickHandler(info, tab) {
         console.log('menu item '+info.menuItemId+' no action.');
         return;
     }
+    console.log('menu item '+info.menuItemId+' action.');
     handlers[info.menuItemId+'OnClickHandler'](info, tab);
 };
 

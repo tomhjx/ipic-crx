@@ -9,10 +9,10 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["content.js"],
-            "run_at": "document_start"
+            "js": ["content.js"]
         }
     ],
+    "host_permissions": ["<all_urls>"],
     "action": {
       "default_title": "My Pictures",
       "default_icon": "icon.png"
