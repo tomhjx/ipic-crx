@@ -19,7 +19,7 @@
     },
     "permissions": [
         "contextMenus",
-        "clipboardRead",
-        "clipboardWrite"
-      ]
+        "storage"
+      ],
+    "options_page":"options.html"
   }

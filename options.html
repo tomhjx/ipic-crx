@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Test Extension Options</title>
+</head>
+<!-- CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+<!-- jQuery and JavaScript Bundle with Popper -->
+<script src="jquery.slim.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="options.js"></script>
+
+<body>
+
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Bucket Region</span>
+        </div>
+        <select class="custom-select" id="regionSelect">
+            <option value="" selected>Choose...</option>
+            <option value="as0">东南亚</option>
+            <option value="na0">北美</option>
+          </select>
+      </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Token</span>
+        </div>
+        <input type="text" class="form-control" id="tokenInput" placeholder="Token">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">My Domain name</span>
+        </div>
+        <input type="text" class="form-control" id="domainInput" placeholder="my.domain.com">
+    </div>
+
+    <div class="btn-group" role="group" >
+        <button type="button" id="applyBtn" class="btn btn-secondary">应用</button>
+        <button type="button" id="keepBtn" class="btn btn-secondary">保存及关闭</button>
+      </div>
+
+</body>
+
+</html>

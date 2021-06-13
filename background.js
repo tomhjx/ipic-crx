@@ -16,7 +16,7 @@ handlers['copyimgOnClickHandler'] = function(info, tab) {
     // doc.execCommand('Copy');
     // doc.body.removeChild(input);
     console.log('sent message...');
-    chrome.tabs.sendMessage(tab.id, {c:'copyimg', picSrcUrl: info.srcUrl});
+    chrome.tabs.sendMessage(tab.id, {c:'copyimg2markdown', p: info.srcUrl});
     console.log(tab.id);
     console.log(info.srcUrl);
 };
@@ -48,7 +48,7 @@ chrome.contextMenus.create(
 chrome.contextMenus.create(
     {
         "id": "copyimg",
-        "title": "复制图片地址",
+        "title": "转存图片并拷贝(markdown)",
         "parentId": "p",
         "contexts": ['image']
         });
