@@ -5,4 +5,4 @@ Chrome extension for collecting pictures.
 
 ## 功能
 
-* 保存图片到七牛云存储空间，并转为MarkDown格式用于粘贴到其他地方
+* 保存图片到七牛云存储空间，并转为MarkDown格式粘贴到剪切板
