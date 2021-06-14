@@ -1,6 +1,6 @@
 {
-    "name": "My Pictures",
-    "description": "A browser action with pictures.",
+    "name": "Pictures Hunter",
+    "description": "A tool for collecting pictures.",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
@@ -14,7 +14,7 @@
     ],
     "host_permissions": ["<all_urls>"],
     "action": {
-      "default_title": "My Pictures",
+      "default_title": "Pictures Hunter",
       "default_icon": "icon.png"
     },
     "permissions": [

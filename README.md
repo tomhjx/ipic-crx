@@ -1,2 +1,2 @@
-# ipic-crx
-Chrome extension for manage picture
+# Pictures Hunter
+Chrome extension for collecting pictures.

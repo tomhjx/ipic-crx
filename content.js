@@ -4,7 +4,7 @@ var ipic = function() {
   var me = this;
 
   function _upload(src, options, cb) {
-  
+    
     var image_buffer = document.createElement('img');
     image_buffer.setAttribute("crossOrigin",'Anonymous')
     image_buffer.src = src;
@@ -96,7 +96,6 @@ var msgHandlers = {};
 msgHandlers['copyimg2markdown'] = function(msg) {
   ipic().upload4MarkDown(msg.p);
 };
-
 
 chrome.runtime.onMessage.addListener(function(msg, _, sendResponse) {
     console.log("Got message from background page: ");
