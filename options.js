@@ -10,18 +10,28 @@ $(function(){
         $('#regionSelect').val(items.region);
         console.log(items);
       });
-      
+
+    function save(cb) {
+
+      chrome.storage.sync.set({
+        token: $('#tokenInput').val(),
+        domain: $('#domainInput').val(),
+        region: $('#regionSelect').val()
+      }, cb);
+
+    }      
 
     $('#applyBtn').click(function(){
-
-        chrome.storage.sync.set({
-            token: $('#tokenInput').val(),
-            domain: $('#domainInput').val(),
-            region: $('#regionSelect').val()
-          }, function() {
-              alert('配置保存成功');
-          });
-
+      save(function() {
+            alert('配置保存成功');
+        });
     });
+
+    $('#keepBtn').click(function(){
+      save(function() {
+        window.close();
+        });
+    });
+
 
 });
